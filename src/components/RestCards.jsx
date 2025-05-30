@@ -13,7 +13,7 @@ const RestCards = ({ data }) => {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black opacity-100"></div>
-        <div className="flex items-center absolute bottom-2/3 -left-1 z-20 rounded-lg text-white font-semibold text-md p-1">
+        <div className="flex items-center absolute bottom-3/4 -left-1 z-20 rounded-lg text-white font-semibold text-md p-1">
             <img className="h-4 z-20" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${data.info.loyaltyDiscoverPresentationInfo.logoCtx.logo}`} alt="" />
             <p className="z-20 mx-2 ">Free delivery</p>
             <div className="absolute bg-red-100 inset-0 bg-gradient-to-l from-red-500 to-orange-400 opacity-100 rounded-lg "></div>

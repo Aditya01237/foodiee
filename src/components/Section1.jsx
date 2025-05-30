@@ -17,7 +17,7 @@ const Section1 = ({resData}) => {
       {/* Header */}
       <div className="flex justify-between items-center flex-wrap gap-2">
         <h1 className="text-xl sm:text-2xl font-bold">{data.header.title}</h1>
-        <ul className="flex text-xl sm:text-2xl gap-2">
+        <ul className="hidden sm:flex text-xl sm:text-2xl gap-2">
           <button onClick={scrollLeft}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-chevron-left-icon lucide-circle-chevron-left"><circle cx="12" cy="12" r="10"/><path d="m14 16-4-4 4-4"/></svg>
           </button>
@@ -30,7 +30,7 @@ const Section1 = ({resData}) => {
       {/* Scrollable Image Container */}
       <div
         ref={scrollContainerRef}
-        className="flex gap-4 mt-4 overflow-x-auto scroll-smooth scrollbar-hide"
+        className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
       >
         {data.imageGridCards?.info?.map((items, index) => (
           <img
