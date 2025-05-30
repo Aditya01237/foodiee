@@ -21,7 +21,7 @@ const Section1 = () => {
           <li onClick={scrollLeft}>⬅️</li>
           <li onClick={scrollRight}>➡️</li>
         </ul>
-      </div>
+      </div> 
 
       <div
         ref={scrollContainerRef}
