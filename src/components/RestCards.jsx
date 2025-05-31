@@ -1,12 +1,10 @@
 import React from "react";
 
-const RestCards = ({ data }) => {
-  //const restData = data;
-  console.log(data);
+const RestCards = ({ data , type}) => {
 
   return (
     <div className="w-68 overflow-x-auto rounded-3xl bg-gray-50 p-2 cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out">
-      <div className="relative h-40 w-64 rounded-3xl overflow-hidden">
+      <div className={`relative rounded-3xl overflow-hidden ${type === 3 ? "h-56 w-[350px] " : "h-44 w-[280px] "}`}>
         <img
           src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${data.info.cloudinaryImageId}`}
           alt=""
