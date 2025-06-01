@@ -6,9 +6,10 @@ const Section3 = ({ resData }) => {
   const data = resData.data.cards[4].card.card;
   const restList = data.gridElements.infoWithStyle.restaurants;
   const sectionTitle = resData.data.cards[2].card.card.title;
-  console.log(restList);
+  //console.log(restList);
 
   const [resList, setresList] = useState(restList);
+  const [search, setsearch] = useState("");
   const [filterApplied, setfilterApplied] = useState([
     false,
     false,
@@ -16,6 +17,17 @@ const Section3 = ({ resData }) => {
     false,
     false,
   ]);
+
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    
+    const searchFilteredList = restList.filter((rest) => (
+        rest.info.cuisines.join().toLowerCase().includes(value.toLowerCase()) === true
+    ) )
+    setresList(searchFilteredList)
+    setsearch(value);
+    console.log(search);
+  }
 
   const doFiltering = ({ label, index }) => {
     const newFilter = [...filterApplied];
@@ -49,7 +61,9 @@ const Section3 = ({ resData }) => {
         <h1 className="text-xl mx-2 sm:text-2xl font-bold">{sectionTitle}</h1>
       </div>
       <div className="flex flex-wrap gap-3 mt-6 mb-8 mx-2">
-        {["Filter", "Ratings 4.0+", "Pure Veg", "New on Swiggy", "Offers"].map(
+      <input className="px-4 border-[0.5px] border-gray-200 rounded-3xl w-60 text-gray-500 " type="text" placeholder="Search" onChange={handleSearch} value={search} />
+        <div>
+          {["Filter", "Ratings 4.0+", "Pure Veg", "New on Swiggy", "Offers"].map(
           (label, index) => (
             <button
               key={index}
@@ -64,6 +78,7 @@ const Section3 = ({ resData }) => {
             </button>
           )
         )}
+        </div>
       </div>
 
       <div className="flex mt-4 gap-2 flex-wrap ">

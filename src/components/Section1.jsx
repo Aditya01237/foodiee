@@ -13,7 +13,7 @@ const Section1 = ({resData}) => {
   };
 
   return (
-    <div className="my-8 px-4 sm:px-12 md:px-28 lg:mx-12">
+    <div className="pt-8 px-4 sm:px-12 md:px-28 lg:mx-12 bg-white">
       {/* Header */}
       <div className="flex justify-between items-center flex-wrap gap-2">
         <h1 className="text-xl mx-8 sm:text-2xl font-bold">{data.header.title}</h1>

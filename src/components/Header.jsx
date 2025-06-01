@@ -5,7 +5,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="bg-gray-50 shadow-md p-4 pt-4">
+    <div className="shadow-md p-4 pt-4 ">
       <div className="flex justify-around items-center">
         {/* Left Section: Logo and Location */}
         <div className="flex items-center gap-2">
